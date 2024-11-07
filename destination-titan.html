@@ -3,35 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="config.js"></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="font-barlow bg-body_mobile_des bg-cover text-white bg-no-repeat bg-center bg-fixed min-[768px]:bg-body_tablet_des min-[1440px]:bg-body_desktop_des">
+  <header>
+    <div class="w-[95%] max-w-[1440px] px-2 pt-4 mx-auto my-0 container header">
+        <nav class="relative mt-[3.5rem] flex justify-between items-start max-[820px]:mt-[0]">
+          <div class="w-[30px] min-[1440px]:w-[50px] min-[1440px]:mt-[-20px] logo-img">
+            <img src="./assets/shared/logo.svg" alt="">
+          </div>
+          <div class="absolute w-[38%] h-[1px] z-50 left-[7rem] bg-line_color max-[768px]:hidden max-[820px]:hidden line"></div>
+          <ul id="sidebar" class="cursor-pointer backdrop-blur-md bg-light_white fixed top-[-15px] right-[-290px] w-[290px] h-[100vh] px-[1.5em] py-[2em] text-white ease-in-out duration-300 min-[768px]:relative min-[768px]:left-[-9em] min-[768px]:top-[-2em] min-[768px]:backdrop-blur-xl min-[768px]:bg-light_white min-[768px]:p-[0] min-[768px]:m-[0] min-[768px]:flex min-[768px]:justify-around 
+          min-[768px]:items-start min-[768px]:w-[70%] min-[768px]:h-[9vh] min-[768px]:left-[50px]
+          min-[1440px]:w-[60%] min-[1440px]:backdrop-blur-md min-[1440px]:bg-light_white  links">
+          <div class="font-barlow_c min-[768px]:flex min-[768px]:justify-around ">
+            <li class="mt-[1em] pt-[1.3em] list-none min-[1440px]:mt-[20px] min-[1440px]:pt-[0] min-[1440px]:flex min-[1440px]:justify-center nav_item"><span class="font-bold mr-[-15px] text-for_number min-[768px]:hidden min-[1440px]:block min-[1440px]:pl-[0px] min-[1440px]:ml-[0px]">00</span><a class="text-for_text decoration-none ml-[2.5em] pr-[1.3em] nav_link" href="index.html">HOME</a></li>
+            <li class="mt-[1em] pt-[1.3em] list-none min-[1440px]:mt-[20px] min-[1440px]:pt-[0] min-[1440px]:flex min-[1440px]:justify-center nav_item"><span class="font-bold mr-[-15px] text-for_number min-[768px]:hidden min-[1440px]:block min-[1440px]:pl-[0px] min-[1440px]:ml-[0px]">01</span><a class="text-for_text decoration-none ml-[2.5em] pr-[1.3em] nav_link"  href="destination-moon.html">DESTINATION</a></li>
+            <li class="mt-[1em] pt-[1.3em] list-none min-[1440px]:mt-[20px] min-[1440px]:pt-[0] min-[1440px]:flex min-[1440px]:justify-center nav_item"><span class="font-bold mr-[-15px] text-for_number min-[768px]:hidden min-[1440px]:block min-[1440px]:pl-[0px] min-[1440px]:ml-[0px]">02</span><a class="text-for_text decoration-none ml-[2.5em] pr-[1.3em] nav_link"  href="crew-commander.html">CREW</a></li>
+            <li class="mt-[1em] pt-[1.3em] list-none min-[1440px]:mt-[20px] min-[1440px]:pt-[0] min-[1440px]:flex min-[1440px]:justify-center nav_item"><span class="font-bold mr-[-15px] text-for_number min-[768px]:hidden min-[1440px]:block min-[1440px]:pl-[0px] min-[1440px]:ml-[0px]">03</span><a class="text-for_text decoration-none ml-[2.5em] pr-[1.3em] nav_link"  href="technology-capsule.html">TECHNOLOGY</a></li>
+          </div>  
+            <img class="absolute top-[2em] right-[1.2em] w-[20px] min-[768px]:hidden menu-icon close" id="click_close"  src="./assets/shared/icon-close.svg" alt="close menu icon">
+          </ul>
+            <img class="min-[768px]:hidden menu-icon open" id="click-open" src="./assets/shared/icon-hamburger.svg" alt="open menu icon">
+        </nav>
+      </div>    
+  
+  </header>
+  <main>
+    <section class="w-[95%] flex flex-col justify-center items-center px-2 pt-4 mx-auto my-0">
+      <div class="text-center mt-[2.5rem] txt-wit-img">
+        <h1 class="uppercase font-barlow_c text-[0.95rem] tracking-[4.55px]"><span class="text-[#ffffff40] font-bold">01</span> Pick your destination</h1>
+        <div class="w-[55%] moon-img">
+          <img class="max-w-[100%] mt-[2rem] ml-[5.5rem] mr-[5.5rem] " src="./assets/destination/image-titan.png" alt="moon image">
+        </div>
+      </div>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+      <div class="mt-[2.5rem] main_text_wit_links">
+        <div class="links flex justify-evenly items-center text-center">
+          <a class="decoration-none uppercase font-barlow_c text-h1_clr" href="destination-moon.html">moon</a>
+          <a class="decoration-none uppercase font-barlow_c text-h1_clr"  href="destination-mars.html">mars</a>
+          <a class="decoration-none uppercase font-barlow_c text-h1_clr"  href="destination-europa.html">europa</a>
+          <a class="decoration-none uppercase font-barlow_c border-b-[2px] text-white border-white"  href="destination-titan.html">titan</a>
+        </div>
 
-  01 Pick your destination
+        <h2 class="text-center mt-[1.5rem] text-[2.7rem] text-6xl font-belle uppercase">Titan</h2>
 
-  Moon
-  Mars
-  Europa
-  Titan
+        <p class="max-w-[50ch] text-center font-normal font-barlow_c text-[0.89rem] mt-[2rem]">
+          The only moon known to have a dense atmosphere other than Earth, Titan 
+          is a home away from home (just a few hundred degrees colder!). As a 
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
 
-  Titan
+        <div class="border-t-[1px] border-light_white mt-[2.5rem] text-center distance_txt">
+          <div class="mt-[1.5rem] average">
+            <p class="font-barlow_c uppercase font-[400] text-h1_clr text-[0.82rem]">Avg. distance</p>
+            <h3 class="font-belle text-[1.75rem] ">1.6 bil. km</h3>
+          </div>
 
-  The only moon known to have a dense atmosphere other than Earth, Titan 
-  is a home away from home (just a few hundred degrees colder!). As a 
-  bonus, you get striking views of the Rings of Saturn.
+          <div class="travel_time">
+            <p class="font-barlow_c uppercase font-[400] text-h1_clr text-[0.82rem]">Est. travel time</p>
+            <h3 class="font-belle text-[1.75rem] ">7 years</h3>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+  </main>
 
-  Avg. distance
-  1.6 bil. km
-
-  Est. travel time
-  7 years
+  <script src="main.js"></script>
 </body>
 </html>
